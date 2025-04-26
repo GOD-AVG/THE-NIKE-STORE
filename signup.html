@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Sign Up Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: rgba(217, 36, 51, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background-color: #fff;
+      width: 900px;
+      height: 600px;
+      display: flex;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+      background: linear-gradient(to right, rgba(217, 36, 51, 255), rgba(217, 36, 51, 255));
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .left img.spinning-top {
+      width: 300px;
+      animation: spinTop 3s linear infinite;
+      transform-style: preserve-3d;
+    }
+
+    @keyframes spinTop {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .right {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .right .logo-swoosh {
+      width: 50px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #d1d5db;
+    }
+
+    .form-group input::placeholder {
+      color: #999;
+    }
+
+    .right .login-btn {
+      padding: 10px;
+      background-color: rgb(223, 65, 34);
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100px;
+    }
+
+    .right .forgot {
+      color: rgb(223, 65, 34);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .right .social-login {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .right .social-login img {
+      width: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo" height="60">
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <img src="https://wallpapers.com/images/hd/red-jordan-shoes-peh58w7hw4k5x9z3.jpg" alt="Nike Shoe" class="spinning-top">
+    </div>
+
+    <div class="right">
+      <img class="logo-swoosh" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Enter your First Name">
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter your Last Name">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your Email">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your Password">
+      </div>
+
+      <div class="form-group">
+        <label>Re-enter Password</label>
+        <input type="password" placeholder="Re-enter your Password">
+      </div>
+
+      <button class="login-btn">SIGN UP</button>
+
+      <div class="social-login">
+        <span style="font-weight: bold;">Or Continue with</span>
+        <img src="https://static.vecteezy.com/system/resources/previews/022/484/509/non_2x/google-lens-icon-logo-symbol-free-png.png" alt="Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
